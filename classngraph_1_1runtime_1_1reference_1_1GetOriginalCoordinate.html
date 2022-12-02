@@ -1,0 +1,1753 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>class ngraph::runtime::reference::GetOriginalCoordinate &#8212; OpenVINO™  documentation</title>
+
+    
+    
+  <link href="_static/css/theme.css" rel="stylesheet">
+  <link href="_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/doxyrest-pygments.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <link href="_static/css/media/favicon.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="_static/css/openvino_sphinx_theme.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/button.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/input.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/textfield.css" type="text/css" />
+    <link rel="stylesheet" href="_static/css/tabs.css" type="text/css" />
+    <script src="_static/js/openvino_sphinx_theme.js"></script>
+
+<link rel="stylesheet" href="_static/css/viewer.min.css" type="text/css" />
+<link rel="stylesheet" href="_static/css/custom.css" type="text/css" />
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/0.5.7/chartjs-plugin-annotation.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-barchart-background@1.3.0/build/Plugin.Barchart.Background.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.1/papaparse.min.js"></script>
+<script src="_static/js/viewer.min.js"></script>
+<script src="/assets/versions_raw.js"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/tabs.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/js/custom.js"></script>
+    <script src="_static/js/graphs.js"></script>
+    <script src="_static/js/graphs_ov_tf.js"></script>
+    <script src="_static/target-highlight.js"></script>
+    <link rel="canonical" href="https://docs.openvino.ai/latest/classngraph_1_1runtime_1_1reference_1_1GetOriginalCoordinate.html" />
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+      <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="index.html">
+  <img src="_static/logo.svg" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class="col-lg-9 collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="home.html">
+  OpenVINO™ Documentation
+ </a>
+</li>
+
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Icon Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/openvinotoolkit/openvino" rel="noopener" target="_blank" title="GitHub">
+            <span><i class="sst-github"></i></span>
+            <label class="sr-only">GitHub</label>
+          </a>
+        </li>
+</ul>
+      </div>
+      
+      <div class="navbar-end-item">
+        
+<div class="dropdown sst-dropdown sst-dropdown-navbar">
+  <button class="btn sst-btn dropdown-toggle" type="button" id="version-selector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+  <div class="dropdown-menu" aria-labelledby="version-selector">
+  </div>
+</div>
+      </div>
+      
+      <div class="navbar-end-item">
+        
+
+<div class="dropdown sst-dropdown sst-dropdown-navbar">
+  <button class="btn sst-btn dropdown-toggle" type="button" id="language-selector" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">English</button>
+  <div class="dropdown-menu" aria-labelledby="language-selector">
+    
+      
+        <a class="dropdown-item font-weight-bold" href="/latest/index.html">English</a>
+      
+    
+      
+        <a  class="dropdown-item" href="/cn/latest/index.html">Chinese</a>
+      
+    
+  </div>
+</div>
+
+      </div>
+      
+    </div>
+  </div>
+</div>
+        <div id="collapse-nav-wrapper" class="container-xl">
+          <button id="collapse-nav" class="button bttn-prm button-size-m" type="button" data-toggle="collapse" data-target="#nav-tree" aria-expanded="false" aria-controls="nav-tree">
+            Documentation navigation <i class="fas fa-chevron-down"></i>
+          </button>
+        </div>
+      </nav>
+    
+<div class="transition-banner container-fluid alert alert-info alert-dismissible fade show" role="alert">
+    <p>OpenVINO 2022.1 introduces a new version of OpenVINO API (API 2.0). For more information on the changes and transition steps, see the <a href="https://docs.openvino.ai/latest/openvino_2_0_transition_guide.html">transition guide</a></p>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar" id="nav-tree"><form class="searchForm bd-search d-flex align-items-center" action="search.html" method="get">
+    <i class="icon fas fa-search"></i>
+    <input type="search" class="form-control" name="query" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+      
+      
+      <ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="namespacengraph_1_1builder.html">
+   builder
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1builder_1_1opset1.html">
+     opset1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="enumngraph_1_1builder_1_1BiasMode.html">
+     BiasMode
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1builder_1_1numpy_autobroadcast_incompatible_shapes.html">
+     numpy_autobroadcast_incompatible_shapes
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1coordinates.html">
+   coordinates
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="namespacengraph_1_1descriptor.html">
+   descriptor
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1descriptor_1_1layout.html">
+     layout
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1element.html">
+   element
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1file_util.html">
+   file_util
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="namespacengraph_1_1op.html">
+   op
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1internal.html">
+     internal
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1util.html">
+     util
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+    <label for="toctree-checkbox-4">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="namespacengraph_1_1op_1_1util_1_1detail.html">
+       detail
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="namespacengraph_1_1op_1_1util_1_1error.html">
+       error
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1v0.html">
+     v0
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1v1.html">
+     v1
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1v10.html">
+     v10
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1v3.html">
+     v3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1v4.html">
+     v4
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1v5.html">
+     v5
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1v6.html">
+     v6
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1v7.html">
+     v7
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1v8.html">
+     v8
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1op_1_1v9.html">
+     v9
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structngraph_1_1op_1_1InterpolateIEAttrs.html">
+     InterpolateIEAttrs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structngraph_1_1op_1_1ResampleIEAttrs.html">
+     ResampleIEAttrs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1ConvolutionIE.html">
+     ConvolutionIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1CropIE.html">
+     CropIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1DeconvolutionIE.html">
+     DeconvolutionIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1Eltwise.html">
+     Eltwise
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1FullyConnected.html">
+     FullyConnected
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1GRUCellIE.html">
+     GRUCellIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1GRUSequenceIE.html">
+     GRUSequenceIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1GatherIE.html">
+     GatherIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1GatherTreeIE.html">
+     GatherTreeIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1HardSigmoid_IE.html">
+     HardSigmoid_IE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1Interp.html">
+     Interp
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1LRN_IE.html">
+     LRN_IE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1LSTMCellIE.html">
+     LSTMCellIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1LSTMSequenceIE.html">
+     LSTMSequenceIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1NonMaxSuppressionIE.html">
+     NonMaxSuppressionIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1NonMaxSuppressionIE2.html">
+     NonMaxSuppressionIE2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1NonMaxSuppressionIE3.html">
+     NonMaxSuppressionIE3
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1NormalizeIE.html">
+     NormalizeIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1OneHotIE.html">
+     OneHotIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1PadIE.html">
+     PadIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1PowerIE.html">
+     PowerIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1ProposalIE.html">
+     ProposalIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1RNNCellIE.html">
+     RNNCellIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1RNNSequenceIE.html">
+     RNNSequenceIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1ReLUIE.html">
+     ReLUIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1ResampleV2.html">
+     ResampleV2
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1ScaleShiftIE.html">
+     ScaleShiftIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1SeluIE.html">
+     SeluIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1SwishIE.html">
+     SwishIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1TileIE.html">
+     TileIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1op_1_1TopKIE.html">
+     TopKIE
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1opset1.html">
+   opset1
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1opset10.html">
+   opset10
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1opset2.html">
+   opset2
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1opset3.html">
+   opset3
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1opset4.html">
+   opset4
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1opset5.html">
+   opset5
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1opset6.html">
+   opset6
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1opset7.html">
+   opset7
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1opset8.html">
+   opset8
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="namespacengraph_1_1opset9.html">
+   opset9
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="namespacengraph_1_1pass.html">
+   pass
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="namespacengraph_1_1pass_1_1itt.html">
+     itt
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+    <label for="toctree-checkbox-6">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="namespacengraph_1_1pass_1_1itt_1_1domains.html">
+       domains
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="namespacengraph_1_1pass_1_1low_precision.html">
+     low_precision
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+    <label for="toctree-checkbox-7">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="namespacengraph_1_1pass_1_1low_precision_1_1itt.html">
+       itt
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+      <label for="toctree-checkbox-8">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="namespacengraph_1_1pass_1_1low_precision_1_1itt_1_1domains.html">
+         domains
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="namespacengraph_1_1pass_1_1low_precision_1_1precision_set.html">
+       precision_set
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="enumngraph_1_1pass_1_1low_precision_1_1levels.html">
+       levels
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1AssignAndReadValueTransformation.html">
+       AssignAndReadValueTransformation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1ConvertTransformation.html">
+       ConvertTransformation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1DataPrecision.html">
+       DataPrecision
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1Exception.html">
+       Exception
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1FakeQuantizeDequantization.html">
+       FakeQuantizeDequantization
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1InferenceEngineLptException.html">
+       InferenceEngineLptException
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1LowPrecision.html">
+       LowPrecision
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1MarkupOptimizations.html">
+       MarkupOptimizations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1MoveFakeQuantize.html">
+       MoveFakeQuantize
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1NetworkHelper.html">
+       NetworkHelper
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+      <label for="toctree-checkbox-9">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1NetworkHelper_1_1InsertDequantizationResult.html">
+         InsertDequantizationResult
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1PortQuantizationGranularityRestriction.html">
+       PortQuantizationGranularityRestriction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1PrecisionsRestriction.html">
+       PrecisionsRestriction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1QuantizationDetails.html">
+       QuantizationDetails
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1QuantizationGranularityRestriction.html">
+       QuantizationGranularityRestriction
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1RecurrentCellTransformation.html">
+       RecurrentCellTransformation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1pass_1_1low_precision_1_1TypeRelaxedReplacer.html">
+       TypeRelaxedReplacer
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1CompressQuantizeWeights.html">
+     CompressQuantizeWeights
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvAddFusion.html">
+     ConvAddFusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvFusion.html">
+     ConvFusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvMultiplyFusion.html">
+     ConvMultiplyFusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertConvolution.html">
+     ConvertConvolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertConvolutions.html">
+     ConvertConvolutions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertDeconvolution.html">
+     ConvertDeconvolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertGRUCellMatcher.html">
+     ConvertGRUCellMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertGatherToGatherIEMatcher.html">
+     ConvertGatherToGatherIEMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertGatherTreeToGatherTreeIEMatcher.html">
+     ConvertGatherTreeToGatherTreeIEMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertGroupConvolution.html">
+     ConvertGroupConvolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertGroupDeconvolution.html">
+     ConvertGroupDeconvolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertHardSigmoidToLegacyMatcher.html">
+     ConvertHardSigmoidToLegacyMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertInterpolateToInterpOrResampleMatcher.html">
+     ConvertInterpolateToInterpOrResampleMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertLRNToLegacyMatcher.html">
+     ConvertLRNToLegacyMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertLSTMCellMatcher.html">
+     ConvertLSTMCellMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertMatMulToFC.html">
+     ConvertMatMulToFC
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertMatMulToFCorGemm.html">
+     ConvertMatMulToFCorGemm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertMatMulToGemm.html">
+     ConvertMatMulToGemm
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertMulAddToScaleShiftOrPower.html">
+     ConvertMulAddToScaleShiftOrPower
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertMulOrAddFinally.html">
+     ConvertMulOrAddFinally
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertNMS5ToLegacyMatcher.html">
+     ConvertNMS5ToLegacyMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertNMSToNMSIEMatcher.html">
+     ConvertNMSToNMSIEMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertNormalizeL2ToLegacyMatcher.html">
+     ConvertNormalizeL2ToLegacyMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertNormalizeL2WithMulToNormalizeIE.html">
+     ConvertNormalizeL2WithMulToNormalizeIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertOneHotToOneHotIEMatcher.html">
+     ConvertOneHotToOneHotIEMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertOpSet1ToLegacy.html">
+     ConvertOpSet1ToLegacy
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertPReLUToReLUIE.html">
+     ConvertPReLUToReLUIE
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertPadToLegacyMatcher.html">
+     ConvertPadToLegacyMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertPowerToPowerIEMatcher.html">
+     ConvertPowerToPowerIEMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertProposal4ToLegacyMatcher.html">
+     ConvertProposal4ToLegacyMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertProposalToLegacyMatcher.html">
+     ConvertProposalToLegacyMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertRNNCellMatcher.html">
+     ConvertRNNCellMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertSeluToSeluIEMatcher.html">
+     ConvertSeluToSeluIEMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertSqrtToPowerIEMatcher.html">
+     ConvertSqrtToPowerIEMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertStridedSliceToCropMatcher.html">
+     ConvertStridedSliceToCropMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertSwishToSwishIEMatcher.html">
+     ConvertSwishToSwishIEMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertTileToLegacyMatcher.html">
+     ConvertTileToLegacyMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ConvertTopKToTopKIEMatcher.html">
+     ConvertTopKToTopKIEMatcher
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1DeconvAddFusion.html">
+     DeconvAddFusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1FullyConnectedBiasFusion.html">
+     FullyConnectedBiasFusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1GenerateMappingFile.html">
+     GenerateMappingFile
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1POTTransformations.html">
+     POTTransformations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1Reshape1DAvgPool.html">
+     Reshape1DAvgPool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1Reshape1DConvolution.html">
+     Reshape1DConvolution
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1Reshape1DMaxPool.html">
+     Reshape1DMaxPool
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1Reshape1DOps.html">
+     Reshape1DOps
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ReshapeFullyConnected.html">
+     ReshapeFullyConnected
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ReshapeFullyConnectedFusion.html">
+     ReshapeFullyConnectedFusion
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1pass_1_1ZeroPointOptimizer.html">
+     ZeroPointOptimizer
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="namespacengraph_1_1pattern.html">
+   pattern
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1pattern_1_1op.html">
+     op
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="namespacengraph_1_1reduction.html">
+   reduction
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-11" name="toctree-checkbox-11" type="checkbox"/>
+  <label for="toctree-checkbox-11">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="enumngraph_1_1reduction_1_1Type.html">
+     Type
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="namespacengraph_1_1runtime.html">
+   runtime
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-12" name="toctree-checkbox-12" type="checkbox"/>
+  <label for="toctree-checkbox-12">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1runtime_1_1opt_kernel.html">
+     opt_kernel
+    </a>
+   </li>
+   <li class="toctree-l2 current active has-children">
+    <a class="reference internal" href="namespacengraph_1_1runtime_1_1reference.html">
+     reference
+    </a>
+    <input checked="" class="toctree-checkbox" id="toctree-checkbox-13" name="toctree-checkbox-13" type="checkbox"/>
+    <label for="toctree-checkbox-13">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul class="current">
+     <li class="toctree-l3">
+      <a class="reference internal" href="namespacengraph_1_1runtime_1_1reference_1_1adaptive_pool.html">
+       adaptive_pool
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="namespacengraph_1_1runtime_1_1reference_1_1detail.html">
+       detail
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="namespacengraph_1_1runtime_1_1reference_1_1details.html">
+       details
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-14" name="toctree-checkbox-14" type="checkbox"/>
+      <label for="toctree-checkbox-14">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1details_1_1IsRandomAccessIt.html">
+         IsRandomAccessIt
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1details_1_1ProposalBox.html">
+         ProposalBox
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1details_1_1from_iterator.html">
+         from_iterator
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1details_1_1is_complete.html">
+         is_complete
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="namespacengraph_1_1runtime_1_1reference_1_1fake_quantize_details.html">
+       fake_quantize_details
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-15" name="toctree-checkbox-15" type="checkbox"/>
+      <label for="toctree-checkbox-15">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4 has-children">
+        <a class="reference internal" href="classngraph_1_1runtime_1_1reference_1_1fake_quantize_details_1_1QuantizationBound.html">
+         QuantizationBound
+        </a>
+        <input class="toctree-checkbox" id="toctree-checkbox-16" name="toctree-checkbox-16" type="checkbox"/>
+        <label for="toctree-checkbox-16">
+         <i class="fas fa-chevron-down">
+         </i>
+        </label>
+        <ul>
+         <li class="toctree-l5">
+          <a class="reference internal" href="enumngraph_1_1runtime_1_1reference_1_1fake_quantize_details_1_1QuantizationBound_1_1Bound.html">
+           Bound
+          </a>
+         </li>
+        </ul>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="namespacengraph_1_1runtime_1_1reference_1_1fft_common.html">
+       fft_common
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="namespacengraph_1_1runtime_1_1reference_1_1internal.html">
+       internal
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="namespacengraph_1_1runtime_1_1reference_1_1kernel.html">
+       kernel
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="namespacengraph_1_1runtime_1_1reference_1_1nms_common.html">
+       nms_common
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-17" name="toctree-checkbox-17" type="checkbox"/>
+      <label for="toctree-checkbox-17">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1nms_common_1_1BoxInfo.html">
+         BoxInfo
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1nms_common_1_1Rectangle.html">
+         Rectangle
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="enumngraph_1_1runtime_1_1reference_1_1CellType.html">
+       CellType
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="enumngraph_1_1runtime_1_1reference_1_1DescriptorType.html">
+       DescriptorType
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="enumngraph_1_1runtime_1_1reference_1_1FFTKind.html">
+       FFTKind
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="enumngraph_1_1runtime_1_1reference_1_1PSROIPoolingMode.html">
+       PSROIPoolingMode
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1CellArgs.html">
+       CellArgs
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1TensorSlice.html">
+       TensorSlice
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1UniqueElements.html">
+       UniqueElements
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1convert_types.html">
+       convert_types
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1widen.html">
+       widen
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1runtime_1_1reference_1_1GetNearestPixel.html">
+       GetNearestPixel
+      </a>
+     </li>
+     <li class="toctree-l3 current active">
+      <a class="current reference internal" href="#">
+       GetOriginalCoordinate
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1runtime_1_1reference_1_1InterpolateEval.html">
+       InterpolateEval
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="classngraph_1_1runtime_1_1reference_1_1InterpolateEvalHelper.html">
+       InterpolateEvalHelper
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-18" name="toctree-checkbox-18" type="checkbox"/>
+      <label for="toctree-checkbox-18">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1InterpolateEvalHelper_1_1ICoords.html">
+         ICoords
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1InterpolateEvalHelper_1_1InfoForGenericLinearONNXMode.html">
+         InfoForGenericLinearONNXMode
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1InterpolateEvalHelper_1_1InfoForLinearMode.html">
+         InfoForLinearMode
+        </a>
+       </li>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1InterpolateEvalHelper_1_1LinearModeInnerIterationResult.html">
+         LinearModeInnerIterationResult
+        </a>
+       </li>
+      </ul>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1runtime_1_1reference_1_1Span.html">
+       Span
+      </a>
+     </li>
+     <li class="toctree-l3 has-children">
+      <a class="reference internal" href="classngraph_1_1runtime_1_1reference_1_1referenceDetectionOutput.html">
+       referenceDetectionOutput
+      </a>
+      <input class="toctree-checkbox" id="toctree-checkbox-19" name="toctree-checkbox-19" type="checkbox"/>
+      <label for="toctree-checkbox-19">
+       <i class="fas fa-chevron-down">
+       </i>
+      </label>
+      <ul>
+       <li class="toctree-l4">
+        <a class="reference internal" href="structngraph_1_1runtime_1_1reference_1_1referenceDetectionOutput_1_1NormalizedBBox.html">
+         NormalizedBBox
+        </a>
+       </li>
+      </ul>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1runtime_1_1AlignedBuffer.html">
+     AlignedBuffer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1runtime_1_1HostTensor.html">
+     HostTensor
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1runtime_1_1SharedBuffer.html">
+     SharedBuffer
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1runtime_1_1Tensor.html">
+     Tensor
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="namespacengraph_1_1snippets.html">
+   snippets
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-20" name="toctree-checkbox-20" type="checkbox"/>
+  <label for="toctree-checkbox-20">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1snippets_1_1isa.html">
+     isa
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="namespacengraph_1_1snippets_1_1op.html">
+     op
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-21" name="toctree-checkbox-21" type="checkbox"/>
+    <label for="toctree-checkbox-21">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1BroadcastLoad.html">
+       BroadcastLoad
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1BroadcastMove.html">
+       BroadcastMove
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1ConvertSaturation.html">
+       ConvertSaturation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1ConvertTruncation.html">
+       ConvertTruncation
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1Kernel.html">
+       Kernel
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1Load.html">
+       Load
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1Nop.html">
+       Nop
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1PowerStatic.html">
+       PowerStatic
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1Scalar.html">
+       Scalar
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1Store.html">
+       Store
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1Subgraph.html">
+       Subgraph
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1Tile.html">
+       Tile
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1op_1_1TileScheduler.html">
+       TileScheduler
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="namespacengraph_1_1snippets_1_1pass.html">
+     pass
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-22" name="toctree-checkbox-22" type="checkbox"/>
+    <label for="toctree-checkbox-22">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="enumngraph_1_1snippets_1_1pass_1_1SnippetsNodeType.html">
+       SnippetsNodeType
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1AlignElementType.html">
+       AlignElementType
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1AssignRegisters.html">
+       AssignRegisters
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1CommonFakeQuantizeDecomposition.html">
+       CommonFakeQuantizeDecomposition
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1ConvertConstantsToScalars.html">
+       ConvertConstantsToScalars
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1EnumerateNodes.html">
+       EnumerateNodes
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1FakeQuantizeDecomposition.html">
+       FakeQuantizeDecomposition
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1InsertLoad.html">
+       InsertLoad
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1InsertMoveBroadcast.html">
+       InsertMoveBroadcast
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1InsertStore.html">
+       InsertStore
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1LoadMoveBroadcastToBroadcastLoad.html">
+       LoadMoveBroadcastToBroadcastLoad
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1SetScalarCountForLoad.html">
+       SetScalarCountForLoad
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1SetScalarCountForStore.html">
+       SetScalarCountForStore
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1TokenizeSnippets.html">
+       TokenizeSnippets
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1CommonOptimizations.html">
+       CommonOptimizations
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1ConvertPowerToPowerStatic.html">
+       ConvertPowerToPowerStatic
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="classngraph_1_1snippets_1_1pass_1_1TransformConvertToConvertTruncation.html">
+       TransformConvertToConvertTruncation
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="namespacengraph_1_1snippets_1_1utils.html">
+     utils
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1snippets_1_1Emitter.html">
+     Emitter
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1snippets_1_1Generator.html">
+     Generator
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1snippets_1_1Schedule.html">
+     Schedule
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="classngraph_1_1snippets_1_1TargetMachine.html">
+     TargetMachine
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="structngraph_1_1SlicePlan.html">
+   SlicePlan
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classngraph_1_1ConstString.html">
+   ConstString
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classngraph_1_1CoordinateIterator.html">
+   CoordinateIterator
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classngraph_1_1CoordinateTransformBasic.html">
+   CoordinateTransformBasic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classngraph_1_1FactoryRegistry.html">
+   FactoryRegistry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classngraph_1_1HasTypeInfoMember.html">
+   HasTypeInfoMember
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classngraph_1_1LogHelper.html">
+   LogHelper
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classngraph_1_1Logger.html">
+   Logger
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classngraph_1_1OpSet.html">
+   OpSet
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="classngraph_1_1QuantizationModeAttribute.html">
+   QuantizationModeAttribute
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-23" name="toctree-checkbox-23" type="checkbox"/>
+  <label for="toctree-checkbox-23">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="enumngraph_1_1QuantizationModeAttribute_1_1Mode.html">
+     Mode
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classngraph_1_1SkipCleanupAttribute.html">
+   SkipCleanupAttribute
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classngraph_1_1VariantImpl.html">
+   VariantImpl
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="classngraph_1_1VariantWrapper.html">
+   VariantWrapper
+  </a>
+ </li>
+</ul>
+
+    </div>
+  </nav>
+  
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+
+<div class="tocsection onthispage pt-5 pb-3">
+    On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#overview">
+   Overview
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#detailed-documentation">
+   Detailed Documentation
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#construction">
+     Construction
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#methods">
+     Methods
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                <div class="tocsection download-docs">
+  <div class="dropdown sst-dropdown">
+    <button class="button bttn-prm button-size-m" data-display="static" type="button" id="download-options"
+      data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Download Docs
+    </button>
+    <div class="dropdown-menu" aria-labelledby="download-options">
+      <a class="dropdown-item" href="#" onclick="window.print()">.pdf</a>
+      <a id="download-zip-btn" class="dropdown-item" href="#">.zip</a>
+    </div>
+  </div>
+</div>
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+              
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+            
+                <div>
+                  
+  <section id="class-ngraph-runtime-reference-getoriginalcoordinate">
+<span id="doxid-classngraph-1-1runtime-1-1reference-1-1-get-original-coordinate"></span><span id="index-0"></span><h1>class ngraph::runtime::reference::GetOriginalCoordinate<a class="headerlink" href="#class-ngraph-runtime-reference-getoriginalcoordinate" title="Permalink to this headline">¶</a></h1>
+<section id="overview">
+<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this headline">¶</a></h2>
+<p>Calculation of the source coordinate using the resized coordinate. <a class="reference internal" href="#details-classngraph-1-1runtime-1-1reference-1-1-get-original-coordinate"><span class="std std-ref">More…</span></a></p>
+<div class="highlight doxyrest-overview-code-block"><div class="highlight"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;interpolate.hpp&gt;</span><span class="cp"></span>
+
+<span class="k">class</span> <span class="n">GetOriginalCoordinate</span>
+<span class="p">{</span>
+<span class="k">public</span><span class="o">:</span>
+    <span class="c1">// construction</span>
+
+    <a class="reference internal" href="#doxid-classngraph-1-1runtime-1-1reference-1-1-get-original-coordinate-1a8356e66200a3168517cba801724ae1ff"><span class="std std-ref">GetOriginalCoordinate</span></a><span></span><span class="p">();</span>
+    <a class="reference internal" href="#doxid-classngraph-1-1runtime-1-1reference-1-1-get-original-coordinate-1a43cb7d25acf0acc8b6ad8dcb8ec286bc"><span class="std std-ref">GetOriginalCoordinate</span></a><span></span><span class="p">(</span><a class="reference internal" href="enumov_1_1op_1_1v4_1_1Interpolate_1_1CoordinateTransformMode.html#doxid-classov-1-1op-1-1v4-1-1-interpolate-1aa769e0059d897c8dc7187f8df8a753e5"><span class="std std-ref">Transform_mode</span></a><span></span> <span class="n">mode</span><span class="p">);</span>
+
+    <span class="c1">// methods</span>
+
+    <span class="kt">float</span> <a class="reference internal" href="#doxid-classngraph-1-1runtime-1-1reference-1-1-get-original-coordinate-1a00a9ed0078bebeb677eb4f5e534ec160"><span class="std std-ref">operator ()</span></a><span></span> <span class="p">(</span>
+        <span class="kt">float</span> <span class="n">x_resized</span><span class="p">,</span>
+        <span class="kt">float</span> <span class="n">x_scale</span><span class="p">,</span>
+        <span class="kt">float</span> <span class="n">length_resized</span><span class="p">,</span>
+        <span class="kt">float</span> <span class="n">length_original</span>
+        <span class="p">)</span> <span class="k">const</span><span class="p">;</span>
+<span class="p">};</span></pre></div></div></section>
+<section id="detailed-documentation">
+<span id="details-classngraph-1-1runtime-1-1reference-1-1-get-original-coordinate"></span><h2>Detailed Documentation<a class="headerlink" href="#detailed-documentation" title="Permalink to this headline">¶</a></h2>
+<p>Calculation of the source coordinate using the resized coordinate.</p>
+<section id="construction">
+<h3>Construction<a class="headerlink" href="#construction" title="Permalink to this headline">¶</a></h3>
+<span class="target" id="doxid-classngraph-1-1runtime-1-1reference-1-1-get-original-coordinate-1a8356e66200a3168517cba801724ae1ff"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="n">GetOriginalCoordinate</span><span class="p">()</span></pre></div></div><p>Constructs calculation of a nearest pixel in the default mode.</p>
+<span class="target" id="doxid-classngraph-1-1runtime-1-1reference-1-1-get-original-coordinate-1a43cb7d25acf0acc8b6ad8dcb8ec286bc"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="n">GetOriginalCoordinate</span><span class="p">(</span><a class="reference internal" href="enumov_1_1op_1_1v4_1_1Interpolate_1_1CoordinateTransformMode.html#doxid-classov-1-1op-1-1v4-1-1-interpolate-1aa769e0059d897c8dc7187f8df8a753e5"><span class="std std-ref">Transform_mode</span></a><span></span> <span class="n">mode</span><span class="p">)</span></pre></div></div><p>Constructs calculation of the source coordinate.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>mode</p></td>
+<td><p>the mode of the calculation of the source coordinate.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="methods">
+<h3>Methods<a class="headerlink" href="#methods" title="Permalink to this headline">¶</a></h3>
+<span class="target" id="doxid-classngraph-1-1runtime-1-1reference-1-1-get-original-coordinate-1a00a9ed0078bebeb677eb4f5e534ec160"></span><div class="highlight doxyrest-title-code-block"><div class="highlight"><pre><span></span><span class="kt">float</span> <span class="k">operator</span> <span class="p">()</span> <span class="p">(</span>
+    <span class="kt">float</span> <span class="n">x_resized</span><span class="p">,</span>
+    <span class="kt">float</span> <span class="n">x_scale</span><span class="p">,</span>
+    <span class="kt">float</span> <span class="n">length_resized</span><span class="p">,</span>
+    <span class="kt">float</span> <span class="n">length_original</span>
+    <span class="p">)</span> <span class="k">const</span></pre></div></div><p>Performing the source coordinate calculation.</p>
+<p class="rubric">Parameters:</p>
+<table class="colwidths-given table">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>x_resized</p></td>
+<td><p>resized coordinate</p></td>
+</tr>
+<tr class="row-even"><td><p>x_scale</p></td>
+<td><p>scale for the considered axis</p></td>
+</tr>
+<tr class="row-odd"><td><p>length_resized</p></td>
+<td><p>length of the resized axis</p></td>
+</tr>
+<tr class="row-even"><td><p>length_original</p></td>
+<td><p>original length of the axis</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Returns:</p>
+<p>the source coordinate</p>
+</section>
+</section>
+</section>
+
+
+                </div>
+            
+            
+                <div class='prev-next-bottom'>
+                  
+
+                </div>
+            
+          </main>
+          
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+<footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p>
+    <a href="www.intel.com" alt="Intel" style="color: #000;">©2022 Intel Corporation</a>
+    <a href="https://www.intel.com/content/www/us/en/legal/terms-of-use.html" alt="terms of use">Terms of Use</a> 
+    <a href="https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html" data-cookie-notice="true" alt="cookies policy">Cookies</a>
+    <a href="https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html" alt="Privacy">Privacy</a> 
+</p>
+<p style="font-size: 0.8em">Intel, the Intel logo, and other Intel marks are trademarks of Intel Corporation or its subsidiaries. Other names and brands may be claimed as the property of others.</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>
